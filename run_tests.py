@@ -1,6 +1,7 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/python
 
 import unittest
 
 if __name__ == '__main__':
+    print("Hello, World!")
     pass
