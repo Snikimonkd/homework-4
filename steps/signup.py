@@ -12,7 +12,9 @@ class SignupPage(Page):
         settings_form.set_text(useremail, settings_form.MAIL)
         settings_form.set_text(password, settings_form.PASSWORD)
         settings_form.set_text(password, settings_form.PASSWORD_REPEAT)
+
         signup_form.submit()
+        signup_form.check_pre_settings_block()
 
 
 class PresettingsPage(Page):
