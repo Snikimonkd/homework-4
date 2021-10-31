@@ -7,11 +7,11 @@ from steps.auth import AuthPage
 from tests.default import DefaultTest
 
 
-class AuthTest(DefaultTest):
+class Auth(DefaultTest):
     USEREMAIL = 'wd055@mail.ru'
     PASSWORD = os.environ['PASSWORD']
 
-    def auth(self):
+    def test(self):
         auth_page = AuthPage(self.driver)
         auth_page.open()
 

@@ -7,9 +7,6 @@ class SignupForm(Component):
     SIGNUP_BLOCK = '//*[@class="signup-block"]'
     PRE_SETTINGS_BLOCK = '//*[@class="pre-settings"]'
 
-    def submit(self):
-        self.driver.find_element_by_xpath(self.SUBMIT).click()
-
     def check_signup_block(self):
         return WebDriverWait(self.driver, 30, 0.1).until(
             lambda d: d.find_element_by_xpath(self.TITLE).text
