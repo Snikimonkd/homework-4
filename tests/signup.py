@@ -21,7 +21,7 @@ class Signup(DefaultTest):
 
 
 class Presettings(Signup):
-    USERENAME = 'Denis'
+    USERENAME = 'Тестовое'
 
     def test(self):
         presettings_page = PresettingsPage(self.driver)
