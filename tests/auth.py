@@ -11,7 +11,7 @@ class AuthTest(DefaultTest):
     USEREMAIL = 'wd055@mail.ru'
     PASSWORD = os.environ['PASSWORD']
 
-    def test(self):
+    def auth(self):
         auth_page = AuthPage(self.driver)
         auth_page.open()
 
