@@ -2,14 +2,15 @@
 
 import sys
 import unittest
-from tests.auth import AuthTest
-from tests.signup import SignupTest
+from tests.auth import Auth
+from tests.signup import Signup, Presettings
 
 
 if __name__ == '__main__':
     suite = unittest.TestSuite((
-        unittest.makeSuite(AuthTest),
-        unittest.makeSuite(SignupTest),
+        unittest.makeSuite(Auth),
+        unittest.makeSuite(Signup),
+        unittest.makeSuite(Presettings),
     ))
     result = unittest.TextTestRunner().run(suite)
     sys.exit(not result.wasSuccessful())
