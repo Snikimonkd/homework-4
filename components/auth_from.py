@@ -1,5 +1,6 @@
 from components.default import Component
 
+
 class AuthForm(Component):
     LOGIN = '//*[@id="mail"]'
     PASSWORD = '//*[@id="password"]'
