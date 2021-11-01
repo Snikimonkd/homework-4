@@ -13,10 +13,11 @@ class Component(object):
 
     def set_by_xpath(self, text, xpath):
         self.driver.find_element_by_xpath(xpath).send_keys(text)
-        self.driver.find_element_by_xpath(xpath).send_keys(Keys.ENTER)
 
     def set_by_id(self, text, id):
         self.driver.find_element_by_id(id).send_keys(text)
+    
+    def enter_by_id(self, id):
         self.driver.find_element_by_id(id).send_keys(Keys.ENTER)
 
     def set_select_by_id(self, value, id):

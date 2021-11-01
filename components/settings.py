@@ -6,7 +6,7 @@ class SettingsForm(Component):
     NAME = 'name'
     PASSWORD = 'password'
     PASSWORD_REPEAT = 'password_repeat'
-    
+
     SELECT_MONTH = '//*[@class="js__date-input__month"]'
     SELECT_DAY = '//*[@class="js__date-input__day"]'
     SELECT_YEAR = '//*[@class="js__date-input__year"]'
@@ -14,9 +14,9 @@ class SettingsForm(Component):
     SUBMIT = 'settings__submit'
     SEX = 'settings_sex'
     DATE_PREFERENCE = 'settings__datePreference'
-    SEX_MALE = 0
-    SEX_FEMALE = 1
-    SEX_BOTH = 2
+    SEX_MALE = '0'
+    SEX_FEMALE = '1'
+    SEX_BOTH = '2'
 
     INPUT_AVATAR = 'input_avatar'
     FILE_FACE = '/img/face.png'
