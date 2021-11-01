@@ -11,6 +11,9 @@ class Component(object):
     def click_by_id(self, id):
         self.driver.find_element_by_id(id).click()
 
+    def click_by_class_name(self, class_name):
+        self.driver.find_element_by_class_name(class_name).click()
+
     def click_by_xpath(self, xpath):
         self.driver.find_element_by_xpath(xpath).click()
 

@@ -29,7 +29,6 @@ class Header(AuthDefaultTest):
         self.assertNotEqual(
             active, header_form.check_icon_active(header_form.HOME_ID))
 
-            
     # 1.10. При нажатии на кнопку настроен происходит переход на страницу настроек
     # 1.11. При активной странице настроек кнопка должна быть серой и не кликабельной, иначе насыщенной и кликабельной
     def test_settings_button(self):
@@ -39,3 +38,8 @@ class Header(AuthDefaultTest):
         SettingsForm(self.driver).check_page()
         self.assertNotEqual(
             active, header_form.check_icon_active(header_form.SETTINGS_ID))
+
+    # 1.12. При нажатии на кнопку смены тема происходит инвертирование тема
+    def test_switch_button(self):
+        header_form = HeaderForm(self.driver)
+        header_form.click_by_class_name(header_form.SWITCH_BTN_CLASS)
