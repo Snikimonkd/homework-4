@@ -13,4 +13,4 @@ class AuthDefaultTest(DefaultTest):
 
     def setUp(self):
         super().setUp()
-        SignupPage().full()
+        SignupPage().full(self.USEREMAIL, self.USERENAME, self.PASSWORD)
