@@ -32,7 +32,7 @@ class Header(AuthDefaultTest):
             
     # 1.10. При нажатии на кнопку настроен происходит переход на страницу настроек
     # 1.11. При активной странице настроек кнопка должна быть серой и не кликабельной, иначе насыщенной и кликабельной
-    def test_home_button(self):
+    def test_settings_button(self):
         header_form = HeaderForm(self.driver)
         active = header_form.check_icon_active(header_form.SETTINGS_ID)
         header_form.click_by_id(header_form.SETTINGS_HREF_ID)

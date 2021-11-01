@@ -8,7 +8,6 @@ from tests.default import DefaultTest
 
 
 class AuthDefaultTest(DefaultTest):
-    USEREMAIL = mimesis.Person().email()
     PASSWORD = os.environ['PASSWORD']
     USERENAME = 'Тестовое'
 
@@ -16,6 +15,6 @@ class AuthDefaultTest(DefaultTest):
         super().setUp()
         signup_page = SignupPage(self.driver)
         signup_page.open()
-        signup_page.full(self.USERENAME, self.USEREMAIL, self.PASSWORD)
+        signup_page.full(self.USERENAME, mimesis.Person().email(), self.PASSWORD)
 
         HomeForm(self.driver).check_page()
