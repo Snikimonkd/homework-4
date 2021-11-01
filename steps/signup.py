@@ -1,4 +1,4 @@
-from components.settings import SettingsForm
+from components.settings import PreSettingsForm, SettingsForm
 from components.signup_from import SignupForm
 from steps.default import Page
 
@@ -21,6 +21,8 @@ class PresettingsPage(Page):
     PATH = '/presettings'
 
     def presettings(self, username):
-        settings_form = SettingsForm(self.driver)
-        settings_form.set_text(username, settings_form.NAME)
-        settings_form.submit()
+        presettings_form = PreSettingsForm(self.driver)
+        presettings_form.set_text(username, presettings_form.NAME)
+        presettings_form.set_file(presettings_form.FILE_FACE, presettings_form.INPUT_AVATAR)
+        presettings_form.set_select(presettings_form.SEX_FEMALE, presettings_form.SEX)
+        presettings_form.submit()
