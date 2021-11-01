@@ -1,5 +1,5 @@
 from components.default import Component
 
 
-class MessageForm(Component):
+class HomeForm(Component):
     PAGE_CLASS = 'content__home'

@@ -1,6 +1,7 @@
 import os
 
 import mimesis
+from components.home import HomeForm
 from steps.signup import SignupPage
 
 from tests.default import DefaultTest
@@ -13,4 +14,8 @@ class AuthDefaultTest(DefaultTest):
 
     def setUp(self):
         super().setUp()
-        SignupPage().full(self.USEREMAIL, self.USERENAME, self.PASSWORD)
+        signup_page = SignupPage(self.driver)
+        signup_page.open()
+        signup_page.full(self.USEREMAIL, self.USERENAME, self.PASSWORD)
+
+        HomeForm(self.driver).check_page()

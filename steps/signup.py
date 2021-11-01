@@ -25,15 +25,12 @@ class SignupPage(Page):
         settings_form.set_text(password, settings_form.PASSWORD_REPEAT)
 
         signup_form.submit()
-        PreSettingsForm(self.driver).check_page()
 
     def full(self, username, useremail, password):
-        signup_form = SignupForm(self.driver)
-        settings_form = SettingsForm(self.driver)
-        settings_form.set_text(useremail, settings_form.MAIL)
-        settings_form.set_text(password, settings_form.PASSWORD)
-        settings_form.set_text(password, settings_form.PASSWORD_REPEAT)
+        self.signup(useremail, password)
 
+        signup_form = SignupForm(self.driver)
         signup_form.submit()
+
         PresettingsPage(self.driver).presettings(username)
 

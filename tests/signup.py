@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+from components.home import HomeForm
 from components.settings import PreSettingsForm
 
 from steps.signup import PresettingsPage, SignupPage
@@ -20,6 +21,7 @@ class Signup(DefaultTest):
         signup_page.open()
 
         signup_page.signup(useremail, self.PASSWORD)
+        PreSettingsForm(self.driver).check_page()
 
     def test_signup_full(self):
         self.test_signup()
@@ -28,6 +30,8 @@ class Signup(DefaultTest):
 
         presettings_page = PresettingsPage(self.driver)
         presettings_page.presettings(self.USERENAME)
+        
+        HomeForm(self.driver).check_page()
 
     # def test_presettings(self):
     #     auth_page = AuthPage(self.driver)
