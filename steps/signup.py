@@ -29,9 +29,6 @@ class SignupPage(Page):
     def full(self, username, useremail, password):
         self.signup(useremail, password)
 
-        signup_form = SignupForm(self.driver)
-        signup_form.submit()
-        
         PreSettingsForm(self.driver).check_page()
 
         PresettingsPage(self.driver).presettings(username)
