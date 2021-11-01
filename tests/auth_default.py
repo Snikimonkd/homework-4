@@ -1,4 +1,3 @@
-import os
 from tests.signup import Signup
 
 
