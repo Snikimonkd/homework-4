@@ -31,6 +31,8 @@ class SignupPage(Page):
 
         signup_form = SignupForm(self.driver)
         signup_form.submit()
+        
+        PreSettingsForm(self.driver).check_page()
 
         PresettingsPage(self.driver).presettings(username)
 
