@@ -16,6 +16,6 @@ class AuthDefaultTest(DefaultTest):
         super().setUp()
         signup_page = SignupPage(self.driver)
         signup_page.open()
-        signup_page.full(self.USEREMAIL, self.USERENAME, self.PASSWORD)
+        signup_page.full(self.USERENAME, self.USEREMAIL, self.PASSWORD)
 
         HomeForm(self.driver).check_page()
