@@ -2,6 +2,8 @@ from components.default import Component
 
 
 class SettingsForm(Component):
+    PAGE_CLASS = 'settings'
+
     MAIL = 'mail'
     NAME = 'name'
     PASSWORD = 'password'
@@ -32,9 +34,8 @@ class SettingsForm(Component):
     def check_valid(self, id):
         return self.check_valid_by_id(id+'_form-item')
 
-    def submit(self):
-        self.driver.find_element_by_id(self.SUBMIT).click()
-
 
 class PreSettingsForm(SettingsForm):
+    PAGE_CLASS = 'pre-settings'
+
     MAIL = 'mail'

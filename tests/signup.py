@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import os
-from components.signup_from import SignupForm
-from steps.auth import AuthPage
+from components.settings import PreSettingsForm
 
 from steps.signup import PresettingsPage, SignupPage
 
 from tests.default import DefaultTest
 import mimesis
+
 
 class Signup(DefaultTest):
     USEREMAIL = mimesis.Person().email()
@@ -24,7 +24,7 @@ class Signup(DefaultTest):
     def test_signup_full(self):
         self.test_signup()
 
-        SignupForm(self.driver).check_pre_settings_block()
+        PreSettingsForm(self.driver).check_page()
 
         presettings_page = PresettingsPage(self.driver)
         presettings_page.presettings(self.USERENAME)
@@ -34,7 +34,7 @@ class Signup(DefaultTest):
     #     auth_page.open()
     #     auth_page.auth(self.USEREMAIL, self.PASSWORD)
 
-    #     SignupForm(self.driver).check_pre_settings_block()
+    #     PreSettingsForm(self.driver).check_page()
 
     #     presettings_page = PresettingsPage(self.driver)
     #     presettings_page.presettings(self.USERENAME)

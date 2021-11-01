@@ -1,5 +1,5 @@
 from components.settings import PreSettingsForm, SettingsForm
-from components.signup_from import SignupForm
+from components.signup_form import SignupForm
 from steps.default import Page
 
 
@@ -14,7 +14,7 @@ class SignupPage(Page):
         settings_form.set_text(password, settings_form.PASSWORD_REPEAT)
 
         signup_form.submit()
-        signup_form.check_pre_settings_block()
+        PreSettingsForm(self.driver).check_page()
 
 
 class PresettingsPage(Page):
