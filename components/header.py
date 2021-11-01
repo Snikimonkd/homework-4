@@ -4,11 +4,14 @@ from components.default import Component
 class HeaderForm(Component):
     SWITCH_BTN_CLASS = 'switch-btn'
     SETTINGS_XPATH = '//*[@href="/settings"]'
-    SETTINGS_ID = 'home-icon__Settings__href'
+    SETTINGS_HREF_ID = 'home-icon__Settings__href'
+    SETTINGS_ID = 'home-icon__Settings'
     MESSAGES_XPATH = '//*[@href="/settings"]'
-    MESSAGES_ID = 'home-icon__Messages__href'
+    MESSAGES_HREF_ID = 'home-icon__Messages__href'
+    MESSAGES_ID = 'home-icon__Messages'
     # HOME_XPATH = '//*[@href="/"]'
-    HOME_ID = 'home-icon__Home__href'
+    HOME_HREF_ID = 'home-icon__Home__href'
+    HOME_ID = 'home-icon__Home'
     MAIN_LOGO_CLASS = 'label-href'
     BURGER_ID = 'burger-button'
 

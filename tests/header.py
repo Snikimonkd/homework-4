@@ -14,6 +14,6 @@ class Header(AuthDefaultTest):
         print('!!!!!!!!!!!!!!!!!!!!')
         print(header_form.check_icon_active(header_form.MESSAGES_ID))
         header_form.click_by_id(header_form.MESSAGES_ID)
-        print(header_form.check_icon_active(header_form.MESSAGES_ID))
         MessageForm(self.driver).check_page()
+        print(header_form.check_icon_active(header_form.MESSAGES_ID))
 
