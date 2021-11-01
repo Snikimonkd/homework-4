@@ -18,7 +18,7 @@ class HeaderForm(Component):
     _DISABLE_ICON = 'disable-icon'
 
     def check_header_close(self):
-        return self.check_class_in_element(self.driver.find_element_by_class(self.HEADER_TABBAR), 'header_close')
+        return self.check_class_in_element(self.driver.find_element_by_class_name(self.HEADER_TABBAR), 'header_close')
 
     def check_icon_active(self, id):
         return self.check_class_in_element(self.driver.find_element_by_id(id), self._ACTIVE_ICON)
