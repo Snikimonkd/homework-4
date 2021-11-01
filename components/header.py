@@ -27,4 +27,4 @@ class HeaderForm(Component):
         return self.check_class_in_element(self.driver.find_element_by_id(id), self._ACTIVE_ICON)
 
     def theme_is_dark(self):
-        return self.driver.find_elements_by_css_selector('body').get_attribute('scheme') == 'space_gray'
+        return self.driver.find_elements_by_css_selector('body')[0].get_attribute('scheme') == 'space_gray'

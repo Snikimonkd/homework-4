@@ -45,3 +45,10 @@ class Header(AuthDefaultTest):
         theme = header_form.theme_is_dark()
         header_form.click_by_class_name(header_form.SWITCH_BTN_CLASS)
         self.assertNotEqual(theme, header_form.theme_is_dark())
+
+    # 1.14. При выходе из аккаунта тема должна сбрасываться
+    # def test_switch_logout(self):
+    #     header_form = HeaderForm(self.driver)
+    #     theme = header_form.theme_is_dark()
+    #     header_form.click_by_class_name(header_form.SWITCH_BTN_CLASS)
+    #     self.assertNotEqual(theme, header_form.theme_is_dark())
