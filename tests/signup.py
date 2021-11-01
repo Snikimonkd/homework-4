@@ -12,19 +12,15 @@ import mimesis
 class Signup(DefaultTest):
     USEREMAIL = mimesis.Person().email()
     PASSWORD = os.environ['PASSWORD']
-    signup_page = None
-
-    def test(self):
-        self.signup_page = SignupPage(self.driver)
-        self.signup_page.open()
-
-        self.signup_page.signup(self.USEREMAIL, self.PASSWORD)
-
-
-class Presettings(Signup):
     USERENAME = 'Тестовое'
 
-    def test(self):
+    def test_signup(self):
+        signup_page = SignupPage(self.driver)
+        signup_page.open()
+
+        signup_page.signup(self.USEREMAIL, self.PASSWORD)
+
+    def test_presettings(self):
         auth_page = AuthPage(self.driver)
         auth_page.open()
         auth_page.auth(self.USEREMAIL, self.PASSWORD)
