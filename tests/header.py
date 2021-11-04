@@ -2,6 +2,7 @@ from components.header import HeaderForm
 from components.home import HomeForm
 from components.message import MessageForm
 from components.settings import SettingsForm
+
 from tests.auth_default import AuthDefaultTest
 
 

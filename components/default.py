@@ -46,6 +46,11 @@ class Component(object):
             lambda d: d.find_element_by_class_name(class_name)
         )
 
+    def check_block_by_id(self, id):
+        return WebDriverWait(self.driver, 30, 0.1).until(
+            lambda d: d.find_element_by_id(id)
+        )
+
     def check_page(self):
         return WebDriverWait(self.driver, 30, 0.1).until(
             lambda d: d.find_element_by_class_name(self.PAGE_CLASS)
