@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+from components.auth import AuthForm
 
 from steps.auth import AuthPage
 
@@ -16,3 +17,12 @@ class Auth(DefaultTest):
         auth_page.open()
 
         auth_page.auth(self.USEREMAIL, self.PASSWORD)
+
+    def test_empte_email(self):
+        auth_page = AuthPage(self.driver)
+        auth_page.open()
+
+        auth_form = AuthForm(self.driver)
+        auth_form.set_login("")
+        auth_form.enter_by_id(auth_form.EMAIL_ID)
+        auth_form.check_valid_by_id(auth_form.EMAIL_FORM_ID)

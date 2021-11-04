@@ -4,7 +4,7 @@ from components.default import Component
 class SettingsForm(Component):
     PAGE_CLASS = 'settings'
 
-    MAIL = 'mail'
+    MAIL = 'email'
     NAME = 'name'
     PASSWORD = 'password'
     PASSWORD_REPEAT = 'password_repeat'

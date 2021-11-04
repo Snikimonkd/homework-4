@@ -19,7 +19,7 @@ class SignupPage(Page):
 
     def signup(self, useremail, password):
         signup_form = SignupForm(self.driver)
-        settings_form = SettingsForm(self.driver)
+        settings_form = PreSettingsForm(self.driver)
         settings_form.set_text(useremail, settings_form.MAIL)
         settings_form.set_text(password, settings_form.PASSWORD)
         settings_form.set_text(password, settings_form.PASSWORD_REPEAT)
