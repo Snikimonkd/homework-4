@@ -31,8 +31,8 @@ class SettingsForm(Component):
     def set_select(self, value, field):
         self.set_select_by_id(value, field)
 
-    def check_valid(self, id):
-        return self.check_valid_by_id(id+'_form-item')
+    def check_non_valid(self, id):
+        return self.check_non_valid_by_id(id+'_form-item')
 
 
 class PreSettingsForm(SettingsForm):

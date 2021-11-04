@@ -38,7 +38,7 @@ class Component(object):
     def check_class_in_element(self, element, class_name):
         return class_name in element.get_attribute('class').split()
 
-    def check_valid_by_id(self, id):
+    def check_non_valid_by_id(self, id):
         return self.check_class_in_element(self.driver.find_element_by_id(id), 'form-item_error')
 
     def check_block_by_class(self, class_name):
