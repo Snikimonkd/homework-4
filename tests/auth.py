@@ -18,6 +18,9 @@ class Auth(DefaultTest):
 
         auth_page.auth(self.USEREMAIL, self.PASSWORD)
 
+
+    # Страница логина(https://lepick.ru/login)
+    # Поле почты. Ошибка при вводе пустой строки, должна появляться подсказка, сообщающая о том, что необходимо заполнить поле.
     def test_empte_email(self):
         auth_page = AuthPage(self.driver)
         auth_page.open()

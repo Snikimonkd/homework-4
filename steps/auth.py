@@ -1,5 +1,5 @@
 from steps.default import Page
-from components.auth_from import AuthForm
+from components.auth import AuthForm
 
 
 class AuthPage(Page):
