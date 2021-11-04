@@ -39,3 +39,15 @@ class PreSettingsForm(SettingsForm):
     PAGE_CLASS = 'pre-settings'
 
     MAIL = 'mail'
+
+    def check_non_valid(self, id):
+        return self.check_non_valid_by_id('signup_'+id+'_form-item')
+
+    def set_login(self, login):
+        self.set_by_id(login, self.MAIL)
+
+    def set_password(self, pwd):
+        self.set_by_id(pwd, self.PASSWORD)
+
+    def set_password_repeat(self, pwd):
+        self.set_by_id(pwd, self.PASSWORD_REPEAT)
