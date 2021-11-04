@@ -28,6 +28,12 @@ class Component(object):
 
     def enter_by_id(self, id):
         self.driver.find_element_by_id(id).send_keys(Keys.ENTER)
+        
+    def clear_by_id(self, id):
+        self.driver.find_element_by_id(id).clear()
+        
+    def text_by_id(self, id):
+        self.driver.find_element_by_id(id).text
 
     def set_select_by_id(self, value, id):
         Select(self.driver.find_element_by_id(id)).select_by_value(value)

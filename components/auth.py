@@ -7,7 +7,7 @@ class AuthForm(Component):
     EMAIL_ID = 'mail'
     EMAIL_FORM_ID = 'login_mail_form-item'
     PASSWORD_ID = 'password'
-    SUBMIT_ID = 'login__form-submit'
+    SUBMIT = 'login__form-submit'
 
     def set_login(self, login):
         self.set_by_id(login, self.EMAIL_ID)
