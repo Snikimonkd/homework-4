@@ -10,7 +10,7 @@ from tests.default import DefaultTest
 
 class AuthDefaultTest(DefaultTest):
     PASSWORD = os.environ['PASSWORD']
-    USEREMAIL = 'email'
+    USEREMAIL = 'wd055@mail.ru'
     USERENAME = 'Тестовое'
 
     def setUp(self):
