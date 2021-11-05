@@ -135,6 +135,6 @@ class Auth(DefaultTest):
         auth_page.auth(self.USEREMAIL, "")
         try:
             HomeForm(self.driver).check_page()
-            assert("sdf")
+            assert("")
         except:
             return

@@ -38,6 +38,9 @@ class Component(object):
     def set_select_by_id(self, value, id):
         Select(self.driver.find_element_by_id(id)).select_by_value(value)
 
+    def set_select_by_class_name(self, value, name):
+        Select(self.driver.find_element_by_class_name(name)).select_by_value(value)
+
     def set_file(self, file, id):
         self.driver.find_element_by_id(id).send_keys(os.getcwd()+file)
 

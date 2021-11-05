@@ -4,14 +4,18 @@ from components.default import Component
 class SettingsForm(Component):
     PAGE_CLASS = 'settings'
 
+    PHOTO_ID = 'settings__new-photo'
+
     MAIL = 'email'
     NAME = 'name'
     PASSWORD = 'password'
     PASSWORD_REPEAT = 'password_repeat'
 
-    SELECT_MONTH = '//*[@class="js__date-input__month"]'
-    SELECT_DAY = '//*[@class="js__date-input__day"]'
-    SELECT_YEAR = '//*[@class="js__date-input__year"]'
+    SELECT_FORM_ID = 'signup_birthday_from-item'
+
+    SELECT_MONTH = 'js__date-input__month'
+    SELECT_DAY = 'js__date-input__day'
+    SELECT_YEAR = 'js__date-input__year'
 
     SUBMIT = 'settings__submit'
     SEX = 'settings_sex'
@@ -22,8 +26,9 @@ class SettingsForm(Component):
 
     INPUT_AVATAR = 'input_avatar'
     FILE_FACE = '/img/face.png'
-    FILE_NOT_FACE = '/img/not_face.jpg'
+    FILE_NOT_FACE = '/img/not_face.png'
     FILE_NOT_FORMAT = '/img/not_format.webp'
+    FILE_LARGE = '/img/large_image.png'
 
     def set_text(self, text, field):
         self.set_by_id(text, field)
@@ -39,9 +44,7 @@ class PreSettingsForm(SettingsForm):
     PAGE_CLASS = 'pre-settings'
 
     MAIL = 'mail'
-
-    def check_non_valid(self, id):
-        return self.check_non_valid_by_id('signup_'+id+'_form-item')
+    ERROR_FORM_ID = "signup-error" 
 
     def set_login(self, login):
         self.set_by_id(login, self.MAIL)

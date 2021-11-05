@@ -9,9 +9,8 @@ from tests.default import DefaultTest
 
 
 class AuthDefaultTest(DefaultTest):
-    PASSWORD = os.environ['PASSWORD']
     USEREMAIL = 'wd055@mail.ru'
-    USERENAME = 'Тестовое'
+    PASSWORD = os.environ['PASSWORD']
 
     def setUp(self):
         super().setUp()
